@@ -8,7 +8,7 @@ class Index extends React.Component{
     render(){
         return (
             <div>
-                分支2
+                分支1
             </div>
         )
     }
