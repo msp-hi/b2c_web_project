@@ -6,14 +6,14 @@ const webpack = require("webpack")
 
 module.exports = {
     // 入口文件
-    entry: './src/js/index.js', 
+    entry: './src/index.js',
     // 输出配置
     output: { 
         // 输出文件名
         filename: './built.js', 
         // 输出文件路径配置
         // __dirname nodejs 的变量，代表当前文件的目录绝对路径
-        path: resolve(__dirname, 'bist') 
+        path: path.resolve(__dirname, 'bist')
     },
 
     // loader配置
@@ -94,8 +94,6 @@ module.exports = {
     // 特点：只会在内存中编译打包，不会有任何输出（不会像之前那样在外面看到打包输出的build包，而是在内存中，关闭后会自动删除）
     // 启动devServer指令为：npx webpack-dev-server
     devServer: {
-        // 项目构建后路径
-        contentBase: resolve(__dirname, 'build'),
         // 启动gzip压缩
         compress: true,
         // 端口号
