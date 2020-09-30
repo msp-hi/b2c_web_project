@@ -1,7 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');  // node 内置核心模块, 用来处理路径问题
 const webpack = require("webpack")
-
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 
 module.exports = {
@@ -34,9 +34,16 @@ module.exports = {
                 use: [
                 // use 数组中 loader 执行顺序：从右到左，从下到上 依次执行
                 // 创建 style 标签，将 js 中的样式资源插入进行，添加到 head 中生效
-                'style-loader',
+                MiniCssExtractPlugin.loader,
                 // 将 css 文件变成 commonjs 模块加载 js 中，里面内容是样式字符串
-                'css-loader'
+                'css-loader',
+                {
+                 loader:"px2rem-loader",
+                 options:{
+                    remUni:58,
+                    remPrecision:8
+                }
+            }
                 ]
             },
             {
@@ -72,6 +79,7 @@ module.exports = {
                 outputPath: 'media',
                 },
             },
+            
 
         ]
     },
@@ -84,7 +92,8 @@ module.exports = {
             // 复制这个./src/index.html文件，并自动引入打包输出的所有资源（JS/CSS）
             template: './src/index.html',
         }),
-        new webpack.HotModuleReplacementPlugin()
+        new webpack.HotModuleReplacementPlugin(),
+        new MiniCssExtractPlugin()
     ],
 
     // 模式
