@@ -14,7 +14,7 @@ class FoodItem extends React.Component{
         return (
             <div>
                 {/* 三级级菜单 */}
-                <div className="topNav">
+                <div className="menu_list">
                     <ul>
                         <li><Link to="/home/food/delicatessen">熟食</Link></li>                        
                         <li><Link to="/home/food/sweets">甜食</Link></li>                        
@@ -22,7 +22,7 @@ class FoodItem extends React.Component{
                         
                     </ul>
                 </div>
-                <div className="videoContent">
+                <div className="">
                     <Route path="/home/food/delicatessen" component={F_Delicate} />
                     <Route path="/home/food/sweets" component={F_Sweets} />
                     <Route path="/home/food/snacks" component={F_Snacks} />
