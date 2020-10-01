@@ -40,7 +40,7 @@ module.exports = {
                 {
                  loader:"px2rem-loader",
                  options:{
-                    remUni:58,
+                    remUni:60,
                     remPrecision:8
                 }
             }
