@@ -20,20 +20,28 @@ class BodyItem extends React.Component{
                 <div className="menu_list">
                     <ul>
                         <li>
-                            <Avatar size="large" src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" /> <br/>
-                            <Link to="/home/baby/clothes">婴童服设</Link>
+                            <Link to="/home/baby/clothes">
+                                <Avatar size="large" src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" /> <br/>
+                                婴童服设
+                            </Link>
                         </li>                        
                         <li>
-                            <Avatar size="large" src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" /> <br/>
-                            <Link to="/home/baby/book">玩具书籍</Link>
+                            <Link to="/home/baby/book">
+                                <Avatar size="large" src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" /> <br/>
+                                玩具书籍
+                            </Link>
                         </li>                        
                         <li>
-                            <Avatar size="large" src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" /> <br/>
-                            <Link to="/home/baby/home">婴童寝居</Link>
+                            <Link to="/home/baby/home">
+                                <Avatar size="large" src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" /> <br/>
+                                婴童寝居
+                            </Link>
                         </li>                        
                         <li>
-                            <Avatar size="large" src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" /> <br/>
-                            <Link to="/home/baby/clean">婴童洗护</Link>
+                            <Link to="/home/baby/clean">
+                                <Avatar size="large" src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" /> <br/>
+                                婴童洗护
+                            </Link>
                         </li>                        
                         
                     </ul>

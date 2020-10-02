@@ -17,6 +17,19 @@
     - food.js  食品
     - cloth.js 女装
 
+## 分类页三级菜单的测试页面
+- src/components/menubar/species/种类名称_menu
+- baby_menu  母婴的三级菜单目录
+    - baby_clothes.js 婴童服设
+    - baby_book.js    玩具书籍
+    - baby_home.js    婴童寝居
+    - baby_clean.js   婴童洗护
+- food_menu  食品的三级菜单目录
+    - delicatessen.js 熟食
+    - sweets.js       甜食
+    - snacks.js       零食
+
+
 
 ## 社区二级和宣传素材下的三级菜单的测试页面
 

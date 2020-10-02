@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2020-09-29 16:16:32
+ * @LastEditTime: 2020-10-02 17:48:07
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \b2c_web_project\src\components\menubar\home.js
+ */
 import React from 'react';
 import ReactDOM from 'react-dom'
 import {
@@ -27,7 +35,6 @@ export default class Home extends React.Component{
                     </ul>
                 </div>
                 <div className="videoContent">
-                    <div><h3>精选</h3></div>
                     <Route path="/home/feat" component={FeatItem} />
                     <Route path="/home/like" component={LikeItem} />
                     <Route path="/home/baby" component={BabyItem} />
