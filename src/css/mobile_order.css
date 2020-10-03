@@ -1,0 +1,67 @@
+
+
+
+.row_1{
+    height: 60px;
+    align-content: center;
+}
+
+.col_1{
+    text-align: center;
+}
+.button_left{
+    border-radius:  100px 0px 0px 100px ;
+    border: 1px solid darkorange;
+    
+}
+.button_right{
+    border-radius: 0px 100px 100px 0px ;
+    border: 1px solid darkorange;
+}
+.button_left:hover{
+    border-radius:  100px 0px 0px 100px ;
+    background: darkorange;
+    color: aliceblue;
+}
+.button_right:hover{
+    border-radius: 0px 100px 100px 0px ;
+    background: darkorange;
+    color: aliceblue;
+}
+.ul_1{
+    list-style:none;
+    padding: 0%;
+}
+.b_1{
+    color: coral;
+}
+
+.right_1{
+    float: right;
+}
+.ul_1 li span{
+    color: rgb(211, 202, 195);
+}
+.span_1{
+    background-image: url('../assets/my_order_rectangle.png');
+    background-size:cover;
+    color: aliceblue;
+}
+.ant-image-img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+
+
+/* 分割线的设置 */
+.ant-divider-horizontal{
+    margin: 0%;
+}
+
+/* 标签页的盖顶效果 */
+.site-custom-tab-bar {
+    z-index: 1;
+    background: #fff;
+  }
