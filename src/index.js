@@ -20,7 +20,13 @@ import Mine from './components/menubar/mine'
 
 
 
-
+let routeConfig =[
+    {url:'/home/',name:'首页',exact:false,component:Home},
+    {url:'/menuitem/',name:'分类',exact:false,component:Menu},
+    {url:'/community/',name:'社区',exact:false,component:Community},
+    {url:'/income/',name:'收益',exact:false,component:Income},
+    {url:'/mine/',name:'我的',exact:false,component:Mine},
+]
 
 class Index extends React.Component {
     render() {
@@ -29,42 +35,21 @@ class Index extends React.Component {
                 <div className="mainDiv">
                     <div className="tab-bar">
                         <ul>
-                            <li>
-                                <Link to="/home/">首页</Link>
-                            </li>
-                            <li>
-                                <Link to="/menuitem">分类</Link>
-                            </li>
-                            <li>
-                                <Link to="/community/">社区</Link>
-                            </li>
-                            <li>
-                                <Link to="/income">收益</Link>
-                            </li>
-                            <li>
-                                <Link to="/mine">我的</Link>
-                            </li>
-
+                            {
+                                routeConfig.map((item,home)=>{
+                                    return (<li key={home}> <Link to={item.url}>{item.name}</Link> </li>)
+                                })
+                            }
                         </ul>
 
                     </div>
                     <Switch>
                         <Route path="/" exact component={Home} />
-                        <Route path="/home/" component={Home} />
-
-                        <Route path="/menuitem">
-                            <Menu />
-                        </Route>
-                        <Route path="/community/">
-                            <Community />
-                        </Route>
-                        <Route path="/income">
-                            <Income />
-                        </Route>
-                        <Route path="/mine">
-                            <Mine />
-                        </Route>
-                        
+                        {
+                            routeConfig.map((item,home)=>{
+                                return (<Route key={home} exact={item.exact} path={item.url}  component={item.component} />)
+                            })
+                        }                     
                     </Switch>
                 </div>
             </Router>
