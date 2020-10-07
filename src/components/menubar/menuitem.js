@@ -1,8 +1,8 @@
 /*
  * @Author: your name
  * @Date: 2020-09-29 16:16:49
- * @LastEditTime: 2020-10-06 17:48:37
- * @LastEditors: your name
+ * @LastEditTime: 2020-10-07 10:29:05
+ * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \b2c_web_project\src\components\menubar\menuitem.js
  */
@@ -25,17 +25,17 @@ import ClothItem from './home_menu/cloth'
 let homeConfig =[
     {
         "name": "母婴",
-        "url": "/home/baby/",
-        "component": BabyItem
+        "url": "/baby/",
+        "component": BabyItem,
     },
     {
         "name": "食品",
-        "url": "/home/food/",
+        "url": "/food/",
         "component": FoodItem
     },
     {
         "name": "女装",
-        "url": "/home/cloth/",
+        "url": "/cloth/",
         "component": ClothItem
     }
 ]
@@ -48,25 +48,26 @@ export default class MenuItem extends React.Component {
                 <Row>
                     <Col span={6}>
                         <Menu
-                            defaultSelectedKeys={['1']}
+                            defaultSelectedKeys={['0']}
                             defaultOpenKeys={['sub1']}
                             mode="inline"
                             theme="light"
                         >
                             {
                                 homeConfig.map((item,home)=>{
-                                    return (<Menu.Item key={home}> <Link to={item.url}>{item.name}</Link> </Menu.Item>)
+                                    return (<Menu.Item key={home}> <Link to={'/menuitem'+item.url}>{item.name}</Link> </Menu.Item>)
                                 })
                             }
 
                         </Menu>
+                        
 
                     </Col>
                     <Col span={18}>
                         <div className="ItemContent">
                             {
                                 homeConfig.map((item,home)=>{
-                                    return (<Route key={home} exact={item.exact} path={item.url}  component={item.component} />)
+                                    return (<Route key={home} exact={item.exact} path={'/menuitem'+item.url}  component={item.component} />)
                                 })
                             }
                         </div>

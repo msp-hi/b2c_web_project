@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2020-10-01 10:57:02
+ * @LastEditTime: 2020-10-07 19:30:19
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \b2c_web_project\src\components\menubar\home_menu\baby_list.js
+ */
 import React from 'react'
 import {
     Route,
@@ -11,6 +19,37 @@ import B_Book from '../species/baby_menu/baby_book'
 import B_Home from '../species/baby_menu/baby_home'
 import B_Clean from '../species/baby_menu/baby_clean'
 
+https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png
+let foodConfig = [
+    {
+        "name": "婴童服设",
+        "types": 1,
+        "url": "/home/baby/clothes",
+        "image": "http://127.0.0.1:8000/goods/goodsclass/list/type/news.png",
+        "component": B_Clothes
+    },
+    {
+        "name": "玩具书籍",
+        "types": 1,
+        "url": "/home/baby/book",
+        "image": "http://127.0.0.1:8000/goods/goodsclass/list/type/time-h.png",
+        "component": B_Book
+    },
+    {
+        "name": "婴童寝居",
+        "types": 1,
+        "url": "/home/baby/home",
+        "image": "http://127.0.0.1:8000/goods/goodsclass/list/type/user-h.png",
+        "component": B_Home
+    },
+    {
+        "name": "婴童洗护",
+        "types": 1,
+        "url": "/home/baby/clean",
+        "image": "http://127.0.0.1:8000/goods/goodsclass/list/type/user-h_ZaNnlfW.png",
+        "component": B_Clean
+    }
+]
 
 class BodyItem extends React.Component{
     render(){
@@ -19,39 +58,20 @@ class BodyItem extends React.Component{
                 {/* 三级级菜单 */}
                 <div className="menu_list">
                     <ul>
-                        <li>
-                            <Link to="/home/baby/clothes">
-                                <Avatar size="large" src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" /> <br/>
-                                婴童服设
-                            </Link>
-                        </li>                        
-                        <li>
-                            <Link to="/home/baby/book">
-                                <Avatar size="large" src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" /> <br/>
-                                玩具书籍
-                            </Link>
-                        </li>                        
-                        <li>
-                            <Link to="/home/baby/home">
-                                <Avatar size="large" src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" /> <br/>
-                                婴童寝居
-                            </Link>
-                        </li>                        
-                        <li>
-                            <Link to="/home/baby/clean">
-                                <Avatar size="large" src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" /> <br/>
-                                婴童洗护
-                            </Link>
-                        </li>                        
+                        {
+                            foodConfig.map((item,home)=>{
+                                return (<li key={home}> <Link to={item.url}><Avatar size="large" src={item.image} /> <br/>{item.name}</Link> </li>)
+                            })
+                        }
                         
                     </ul>
                 </div>
                 <div className="">
-                    <Route path="/home/baby/clothes" component={B_Clothes} />
-                    <Route path="/home/baby/book" component={B_Book} />
-                    <Route path="/home/baby/home" component={B_Home} />
-                    <Route path="/home/baby/clean" component={B_Clean} />
-                    
+                    {
+                        foodConfig.map((item,home)=>{
+                            return (<Route key={home} exact={item.exact} path={item.url}  component={item.component} />)
+                        })
+                    } 
                 </div>
                 BodyItem母婴页
             </div>
