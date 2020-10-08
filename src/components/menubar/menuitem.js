@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-09-29 16:16:49
- * @LastEditTime: 2020-10-07 10:29:05
+ * @LastEditTime: 2020-10-08 09:27:21
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \b2c_web_project\src\components\menubar\menuitem.js
@@ -25,16 +25,19 @@ import ClothItem from './home_menu/cloth'
 let homeConfig =[
     {
         "name": "母婴",
+        "types": 1,
         "url": "/baby/",
-        "component": BabyItem,
+        "component": BabyItem
     },
     {
         "name": "食品",
+        "types": 1,
         "url": "/food/",
         "component": FoodItem
     },
     {
         "name": "女装",
+        "types": 1,
         "url": "/cloth/",
         "component": ClothItem
     }
